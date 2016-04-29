@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!---  jquery mobile links =-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
+    <link rel="stylesheet" href="themes/ScoreCard.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <script src="scripts/jquery-1.12.2.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.js"></script>
+	<script src="scripts/poomsaeScoring.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        #inlineHdr {font-weight: bold;
+                        
+        }
+        #totalScore {position: absolute;
+                                font-size: 60%;
+                                top: 0%;
+                                right: 0%;
+                                background-color: #2e3192;
+        }
+		#resetScore {position: absolute;
+                                font-size: 100%;
+                                top: 0%;
+                                right: 30%;
+                                background-color: #005e32;
+        }
+        #score {font-size: 300%;}
+        .sm-btn-font {font-size: 100%;}
+        legend,
+		.ui-mobile label,
+        div.ui-controlgroup-label {
+        font-weight: normal;
+        font-size: 80%;
+        }
+		#masterySubmit {position: absolute;
+				top: 10%;
+				right:0%;}
+        
+</style>
+  </head>
+  <body>
+    <div data-role="page" id="PoomsaeScoring">
+      <div data-role="header">
+      <img src="images/poomsae-sidekick_50x40.png" alt="poomsae_sidekick" /> 
+      <span id="inlineHdr">Poomsae Scoring</span>
+	  <div id="resetScore" data-mini="true" class="ui-corner-all">
+		<input type="submit" id="btnReset" value="reset">
+	  </div>
+      <div data-role="content" id="totalScore" data-mini="true" class="ui-corner-all">
+        <table>
+          <tr>
+            <td>Accuracy
+            <br />5.0pts</td>
+            <td></td>
+            <td rowspan="2">
+              <span id="score">10</span>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Mastery
+            <br />5.0 pts</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+	  </div>
+      <div data-role="main" class="ui-content" data-theme="a">
+        <h5>POOMSAE MASTERY</h5>
+		<div id="masterySubmit" data-mini="true">
+		  <input type="submit" value="Final Score" id="masteryScore" form="formMastery" />
+		</div>
+        <div class="ui-field-contain">
+          <form  id="formMastery">
+            
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="movement" data-theme="b">
+            <legend>Extent of Movement:</legend> 
+            <label for="rbMovementOne">1.0</label> 
+            <input type="radio" name="Movement" id="rbMovementOne" value="1.0" checked /> 
+            <label for="rbMovementPtNine">0.9</label> 
+            <input type="radio" name="Movement" id="rbMovementPtNine" value="0.9" /> 
+            <label for="rbMovementPtEight">0.8</label> 
+            <input type="radio" name="Movement" id="rbMovementPtEight" value="0.8" /> 
+            <label for="rbMovementPtSeven">0.7</label> 
+            <input type="radio" name="Movement" id="rbMovementPtSeven" value="0.7" /> 
+            <label for="rbMovementPtSix">0.6</label> 
+            <input type="radio" name="Movement" id="rbMovementPtSix" value="0.6" /> 
+            <label for="rbMovementPtFive">0.5</label> 
+            <input type="radio" name="Movement" id="rbMovementPtFive" value="0.5" />
+			</fieldset>
+            
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="balance" data-theme="c">
+            <legend>Balance:</legend> 
+            <label for="rbBalanceOne">1.0</label> 
+            <input type="radio" name="Balance" id="rbBalanceOne" value="1.0" checked /> 
+            <label for="rbBalancePtNine">0.9</label> 
+            <input type="radio" name="Balance" id="rbBalancePtNine" value="0.9" /> 
+            <label for="rbBalancePtEight">0.8</label> 
+            <input type="radio" name="Balance" id="rbBalancePtEight" value="0.8" /> 
+            <label for="rbBalancePtSeven">0.7</label> 
+            <input type="radio" name="Balance" id="rbBalancePtSeven" value="0.7" /> 
+            <label for="rbBalancePtSix">0.6</label> 
+            <input type="radio" name="Balance" id="rbBalancePtSix" value="0.6" /> 
+            <label for="rbBalancePtFive">0.5</label> 
+            <input type="radio" name="Balance" id="rbBalancePtFive" value="0.5" />
+			</fieldset>
+					
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="power" data-theme="d">
+            <legend>Power and Speed:</legend> 
+            <label for="rbPowerOne">1.0</label> 
+            <input type="radio" name="Power" id="rbPowerOne" value="1.0" checked /> 
+            <label for="rbPowerPtNine">0.9</label> 
+            <input type="radio" name="Power" id="rbPowerPtNine" value="0.9" /> 
+            <label for="rbPowerPtEight">0.8</label> 
+            <input type="radio" name="Power" id="rbPowerPtEight" value="0.8" /> 
+            <label for="rbPowerPtSeven">0.7</label> 
+            <input type="radio" name="Power" id="rbPowerPtSeven" value="0.7" /> 
+            <label for="rbPowerPtSix">0.6</label> 
+            <input type="radio" name="Power" id="rbPowerPtSix" value="0.6" /> 
+            <label for="rbPowerPtFive">0.5</label> 
+            <input type="radio" name="Power" id="rbPowerPtFive" value="0.5" />
+			</fieldset>
+			
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="rhythm" data-theme="e">
+            <legend>Coordination of Rhythm and Tempo:</legend> 
+            <label for="rbRhythmOne">1.0</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmOne" value="1.0" checked /> 
+            <label for="rbRhythmPtNine">0.9</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmPtNine" value="0.9" /> 
+            <label for="rbRhythmPtEight">0.8</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmPtEight" value="0.8" /> 
+            <label for="rbRhythmPtSeven">0.7</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmPtSeven" value="0.7" /> 
+            <label for="rbRhythmPtSix">0.6</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmPtSix" value="0.6" /> 
+            <label for="rbRhythmPtFive">0.5</label> 
+            <input type="radio" name="Rhythm" id="rbRhythmPtFive" value="0.5" />
+			</fieldset>
+			
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="Energy" data-theme="f">
+            <legend>Expression of Energy:</legend> 
+            <label for="rbEnergyOne">1.0</label> 
+            <input type="radio" name="Energy" id="rbEnergyOne" value="1.0" checked /> 
+            <label for="rbEnergyPtNine">0.9</label> 
+            <input type="radio" name="Energy" id="rbEnergyPtNine" value="0.9" /> 
+            <label for="rbEnergyPtEight">0.8</label> 
+            <input type="radio" name="Energy" id="rbEnergyPtEight" value="0.8" /> 
+            <label for="rbEnergyPtSeven">0.7</label> 
+            <input type="radio" name="Energy" id="rbEnergyPtSeven" value="0.7" /> 
+            <label for="rbEnergyPtSix">0.6</label> 
+            <input type="radio" name="Energy" id="rbEnergyPtSix" value="0.6" /> 
+            <label for="rbEnergyPtFive">0.5</label> 
+            <input type="radio" name="Energy" id="rbEnergyPtFive" value="0.5" />
+			</fieldset>
+          </form>
+		  
+        </div>
+        <hr />
+        <div class="ui-field-contain ui-btn-inline" data-mini="true" >
+		
+		<form  name="deductions">
+		<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="deduct" data-theme="a" class="ui-btn-inline">
+             <legend>POOMSAE Accuracy of Movement:</legend>
+			<label for="rbPtThree">0.3 Deduction</label> 
+            <input type="radio" name="deductionPt" id="rbPtThree" value="0.3" />
+            <label for="rbPtOne">0.1 Deduction</label>
+            <input type="radio" name="deductionPt" id="rbPtOne" value="0.1" />
+
+		</fieldset>
+       </form>
+		</div>
+      </div>
+    </div>
+	
+  </body>
+</html>

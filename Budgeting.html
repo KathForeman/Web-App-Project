@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+       <title>Tournament Budgeting</title>
+	<!---  jquery mobile --->
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/ScoreCard.min.css" />
+	<script src="scripts/jquery-1.12.2.js"></script>
+	<script src="scripts/jquery.mobile-1.4.5.js"></script>
+	<meta name="viewport" content="width=device-width">
+	<style>
+
+	</style>
+</head>
+<body>
+<div data-role="page" id="Home"  data-theme="g" >
+ 
+    <div data-role="header">
+        <h1>Tournament Budgeting</h1>
+		 <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="Tournament_Planning.html" data-ajax="false" 
+				data-icon="back">Return to Tournament Planning</a>
+            </li>
+          </ul>
+        </div>
+	</div>
+	<div data-role="main"class="ui-content">
+       
+        <p>Planning a budget is one of the first steps.</p>
+        <p>Begin by entering you expenses and expected revenue.</p>
+	 <div data-role="controlgroup" data-type="vertical">
+        <a href="#expenses" class="ui-btn ui-shadow " data-transition="slide">Expenses</a> 
+        <a href="#revenue" class="ui-btn ui-shadow " data-transition="slide">Revenue</a> 
+	</div>
+	</div>
+</div>
+<div data-role="page" id="expenses"  data-theme="g" >
+ 
+    <div data-role="header">
+        <h1>Tournament Budgeting</h1>
+		<div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#revenue" data-icon="action">Revenue</a>
+            </li>
+          </ul>
+        </div>
+	</div>
+	
+
+		<div class="ui-field-contain">
+		<div data-role="form">
+			<h3>Expenses</h3>
+			<hr>
+		<div data-role="main" data-theme="g" >
+			<table data-role="table"  data-mode="columntoggle" class="ui-responsive ui-btn-g">
+				<thead>
+					<th>Type of Expense</th>
+					<th data-priority="1">Cost </th>
+					<th data-priority="2">Lead Time</th>
+					<th data-priority="3">Contact Name</th>
+					<th data-priority="4">Contact Number</th>
+				</thead>
+				<tbody>
+				<tr>
+					<td>Rental Equipment</td>
+					<td><input type="text" name="txtRentFee" id="txtRentFee"></td>
+					<td><input type="text" name="txtRentTime" id="txtRentTime"></td>
+					<td><input type="text" name="txtRentCName" id="txtRentCName"></td>
+					<td><input type="text" name="txtRentCNumber" id="txtRentCNumber"></td>
+				</tr>
+				<tr>
+					<td>Permits</td>
+					<td><input type="text" name="txtPermitFee" id="txtPermitFee"></td>
+					<td><input type="text" name="txtPermitTime" id="txtPermitTime"></td>
+					<td><input type="text" name="txtPermitCName" id="txtPermitCName"></td>
+					<td><input type="text" name="txtPermitCNumber" id="txtPermitCNumber"></td>
+				</tr>
+				<tr>
+					<td>FirstAid</td>
+					<td><input type="text" name="txtFirstAidFee" id="txtFirstAidFee"></td>
+					<td><input type="text" name="txtFirstAidTime" id="txtFirstAidTime"></td>
+					<td><input type="text" name="txtFirstAidCName" id="txtFirstAidCName"></td>
+					<td><input type="text" name="txtFirstAidCNumber" id="txtFirstAidCNumber"></td>
+				</tr>
+				<tr>
+					<td>Awards</td>
+					<td><input type="text" name="txtAwardFee" id="txtAwardFee"></td>
+					<td><input type="text" name="txtAwardTime" id="txtAwardTime"></td>
+					<td><input type="text" name="txtAwardCName" id="txtAwardCName"></td>
+					<td><input type="text" name="txtAwardCNumber" id="txtAwardCNumber"></td>
+				</tr>
+				<tr>
+					<td>Consumables</td>
+					<td><input type="text" name="txtConsumeFee" id="txtConsumeFee"></td>
+					<td><input type="text" name="txtConsumeTime" id="txtConsumeTime"></td>
+					<td><input type="text" name="txtConsumeCName" id="txtConsumeCName"></td>
+					<td><input type="text" name="txtConsumeCNumber" id="txtConsumeCNumber"></td>
+				</tr>
+				<tr>
+					<td>Advertising</td>
+					<td><input type="text" name="txtAdvertFee" id="txtAdvertFee"></td>
+					<td><input type="text" name="txtAdvertTime" id="txtAdvertTime"></td>
+					<td><input type="text" name="txtAdvertCName" id="txtAdvertCName"></td>
+					<td><input type="text" name="txtAdvertCNumber" id="txtAdvertCNumber"></td>
+				</tr>
+				<tr>
+					<td>Printing</td>
+					<td><input type="text" name="txtPrintFee" id="txtPrintFee"></td>
+					<td><input type="text" name="txtPrintTime" id="txtPrintTime"></td>
+					<td><input type="text" name="txtPrintCName" id="txtPrintCName"></td>
+					<td><input type="text" name="txtPrintCNumber" id="txtPrintCNumber"></td>
+				</tr>
+				<tr>
+					<td>Hospitality</td>
+					<td><input type="text" name="txtHospFee" id="txtHospFee"></td>
+					<td><input type="text" name="txtHospTime" id="txtHospTime"></td>
+					<td><input type="text" name="txtHospCName" id="txtHospCName"></td>
+					<td><input type="text" name="txtHosptCNumber" id="txtHospCNumber"></td>
+				</tr>
+				<tr>
+					<td>CleanUp</td>
+					<td><input type="text" name="txtCleanUpFee" id="txtCleanUpFee"></td>
+					<td><input type="text" name="txtCleanUpTime" id="txtCleanUpTime"></td>
+					<td><input type="text" name="txtCleanUpCName" id="txtCleanUpCName"></td>
+					<td><input type="text" name="txtCleanUpCNumber" id="txtCleanUpCNumber"></td>
+				</tr>
+				<tr>
+					<td>Total Expenses<td>
+					<td><input type="text" name="expenseTotal" id="expenseTotal"><td>
+				<tr>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+<div data-role="page" id="revenue"  data-theme="g" >
+ 
+    <div data-role="header">
+        <h1>Tournament Budgeting</h1>
+		<div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#expenses" data-icon="action">Expenses</a>
+            </li>
+          </ul>
+        </div>
+	</div>
+	
+
+	<div class="ui-field-contain">
+		<div data-role="form">
+			<h3>Revenue</h3>
+			<hr>
+			<div data-role="main" data-theme="g" >
+				<table data-role="table"  data-mode="columntoggle" class="ui-responsive ui-btn-g">
+					<thead>
+						<th >Type of Revenue</th>
+						<th data-priority="1">Price</th>
+						<th data-priority="2">Quantity</th>
+						<th data-priority="3">Total</th>
+					</thead>
+					<tbody>
+						<tr>
+						<td>Registration Fees</td>
+						<td><input type="text" id="txtRegPrice" value=""></td>
+						<td><input type="text" id="txtRegQuantity" value=""></td>
+						<td><input type="text" id="itemRegRevenue" disabled></td>
+						</tr>
+						<tr>
+						<td>Ticket Sales</td>
+						<td><input type="text" id="txtTicketPrice" value=""></td>
+						<td><input type="text" id="txtTicketQuantity" value=""></td>
+						<td><input type="text" id="itemTicketRevenue" disabled></td>
+						</tr>
+						<tr>
+						<td>50/50 Ticket Sales</td>
+						<td><input type="text" id="txtRafflePrice" value=""></td>
+						<td><input type="text" id="txtRaffleQuantity" value=""></td>
+						<td><input type="text" id="itemRaffleRevenue" disabled></td>
+						</tr>
+						<tr>
+						<td>Product Sales</td>
+						<td><input type="text" id="txtProductPrice" value=""></td>
+						<td><input type="text" id="txtProductQuantity" value=""></td>
+						<td><input type="text" id="itemProductRevenue" disabled></td>
+						</tr>
+						<tr>
+						<td>Total Revenue</td>
+						<td><input type="text" id="totalPrice" disabled></td>
+						<td><input type="text" id="totalQuantity" disabled></td>
+						<td><input type="text" id="totalRevenue" disabled></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Tournament Planning Mobile App</title>
+    <!---  jquery mobile Links =-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+    <link rel="stylesheet" href="themes/ScoreCard.min.css" />
+    <script src="scripts/jquery-1.12.2.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.js"></script>
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <!--- Welcome Page =-->
+    <section id="Home" data-role="page">
+      <div data-role="header">
+        <h1>Tournament Planning</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <h3>Welcome to Tournament Planning</h3>
+        <p>Helping you to manage your events with ease.</p>
+        <p>With pages from budgeting, to bracketing, to event day activities, We&#39;ll help your event run smoothly</p>
+        <div data-role="controlgroup" data-type="vertical">
+        <a href="#preliminary" class="ui-btn ui-shadow" data-transition="slide">Preliminary Planning</a> 
+        <a href="#detail" class="ui-btn ui-shadow" data-transition="slide">Detail Planning</a> 
+        <a href="#oneMonth" class="ui-btn ui-shadow" data-transition="slide">One Month to Go</a> 
+        <a href="#oneWeek" class="ui-btn ui-shadow" data-transition="slide">The Week Before</a> 
+        <a href="#eventDay" class="ui-btn ui-shadow" data-transition="slide">Tournament Day</a> 
+        <a href="#afterEvent" class="ui-btn ui-shadow" data-transition="slide">After the Tournament</a></div>
+        <br />
+      </div>
+      <div data-role="footer">
+        <h1>Page footer</h1>
+        <p>copyright, contact information</p>
+      </div>
+    </section>
+    <!--- Preliminary Planning =-->
+    <div id="preliminary" data-role="page">
+      <div data-role="header">
+        <h1>Preliminary Planning</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#Home" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <p>Preliminary planning steps include:</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Prepare a budget, plan, and schedule.</h4>
+            <p>The scope of the tournament will determine the size of the venue. A single school tournament can be held in house, while a multi-school or invitational event may require renting a local gym or community center.</p>
+            <p>Identify vendors for products needed, or locations to rent</p>
+            <p>Create a budget with lead times and contacts 
+            <a href="Budgeting.html" data-ajax="false">Go to Budget Worksheet</a></p>
+            <p>Make a detailed schedule of all the tasks that need to be done. Work backwards from the tournament date.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Determine Purpose</h4>
+            <ul data-role="listview" data-inset="true">
+              <li>Promote the Sport</li>
+              <li>Community-Building</li>
+              <li>
+                <a href="#fundRaiser" data-rel="popup">Fund-Raiser</a>
+              </li>
+            </ul>
+          </div>
+          <div data-role="popup" class="ui-content" id="fundRaiser" data-arrow="t">
+            <p>Fund Raising Examples:</p>
+            <ul>
+              <li>Local Police Department</li>
+              <li>Local fire Department</li>
+              <li>Humanitarian Effort</li>
+            </ul>
+          </div>
+          <div data-role="collapsible">
+            <h4>Choose a date.</h4>
+            <ul data-role="listview" data-inset="true">
+              <li>
+                <a href="#avoidConflicts" data-rel="popup">Avoid Conflicts</a>
+              </li>
+              <li>
+                <a href="#checkSchools" data-rel="popup">Check with other schools</a>
+              </li>
+              <li>
+                <a href="#seasonalChallenges" data-rel="popup">Seasonal Challenges</a>
+              </li>
+            </ul>
+          </div>
+          <div data-role="popup" class="ui-content" id="avoidConflicts" data-arrow="t">
+            <p>Check your community calendar and avoid conflicts with other major events</p>
+          </div>
+          <div data-role="popup" class="ui-content" id="checkSchools" data-arrow="t">
+            <p>Check with other schools in the area to make sure no one else is also in the preliminary planning stages of a tournament</p>
+          </div>
+          <div data-role="popup" class="ui-content" id="seasonalChallenges" data-arrow="t">
+            <p>Consider seasonal challenges. Winter storms may cause a cancellation, Holidays and school breaks may result in lower participation.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Identify referees and officials</h4>
+            <p>School Black Belt Volunteers and Masters from other schools are good candidates</p>
+          </div>
+          <div data-role="controlgroup" data-type="horizontal">
+          <a href="#Home" class="ui-btn ui-mini ui-btn-b" data-transition="slideup">go to welcome page</a> 
+          <a href="#detail" class="ui-btn ui-mini ui-btn-b" data-transition="slide">Detail Planning</a>
+		  </div>
+          <br />
+        </div>
+        <div data-role="footer">
+          <h1>Page footer</h1>
+          <p>copyright, contact information</p>
+        </div>
+      </div>
+    </div>
+    <!--- Detail Planning =-->
+    <div id="detail" data-role="page">
+      <div data-role="header">
+        <h1>Detail Planning</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#preliminary" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <p>Tasks to be completed within 2 - 3 months for the event</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Create Tournament Publications.</h4>
+            <div data-role="collapsible">
+              <h4>Establish a website</h4>
+              <ul data-role="listview" data-inset="true">
+                <li>Social Media (Facebook, Twitter)</li>
+                <li>Google Sites</li>
+                <li>Add a Page to Your Website</li>
+              </ul>
+              <p>Include links
+              <br />for more information</p>
+            </div>
+            <div data-role="collapsible">
+              <h4>Tournament Poster
+              <br />and Flyers.</h4>
+              <ul data-role="listview" data-inset="true">
+                <li>Name of the Event</li>
+                <li>When and Where</li>
+                <li>Who&#39;s invited</li>
+                <li>Fundraiser Details</li>
+                <li>List Website</li>
+              </ul>
+            </div>
+          </div>
+          <div data-role="collapsible">
+            <h4>Order Awards</h4>
+            <p>Consider basing it on on the number of students in your school.</p>
+            <p>First Place, Second Place, extra Third places (for four person elimination rounds)</p>
+            <p>Determine if you will be awarding special awards, such as Highest Scorer, Best in Category, etc.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Registration Packets</h4>
+            <p>Print invitations and registration packets</p>
+            <div data-role="collapsible">
+              <h5>Packet Contents</h5>
+              <ul data-role="listview" data-inset="true">
+                <li>Time and Place</li>
+                <li>Tournament-day Schedule</li>
+                <li>Divisions</li>
+                <li>Events</li>
+                <li>Gear Requirements</li>
+                <li>Fees and Deadlines</li>
+                <li>Event Website</li>
+                <li>Contact Information</li>
+                <li>Registration Form</li>
+              </ul>
+            </div>
+            <div data-role="collapsible">
+              <h5>Sample Links <br> (Press and hold to open in a new tab)</h5>
+              <p>
+                <a href="Sample_Packet.pdf" target="iframePDF">Sample Packet</a>
+              </p>
+              <p>
+                <a href="Competitor_Reg_Form.pdf" target="iframePDF">Sample Competitor Registration</a>
+              </p>
+              <p>
+                <a href="Coach_Reg_Form.pdf" target="iframePDF">Coach Registration</a>
+              </p>
+              <iframe name="iframePDF" style="border:none;"></iframe>
+            </div>
+          </div>
+          <div data-role="collapsible">
+            <h4>Athlete Tracking</h4>
+            <p>Establish method for keeping track of athletes, schools, etc. (Excel will work, or a Google Document if you want to share it more easily with your committee members.)</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Publicize Event</h4>
+            <p>Begin widespread publicity for the event to students and parents.</p>
+            <p>Distribute Flyers to gain interest</p>
+            <p>Distribute Registration Packets</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>First-Aid</h4>
+            <p>Coordinate the First Aid plan for the event.</p>
+            <ul data-role="listview" data-inset="true">
+              <li>Emergency Call</li>
+              <li>On-site Presence</li>
+              <li>Immediate Supplies
+              <ul>
+                <li>Ice-Packs</li>
+                <li>Ace Bandages</li>
+              </ul></li>
+            </ul>
+          </div>
+          <div data-role="collapsible">
+            <h4>Reserve Equipment</h4>
+            <p>You may need to borrow or rent some equipment. Reserve them now to avoid last minute calls. Some items you may need:</p>
+            <ul data-role="listview" data-inset="true">
+              <li>Tables</li>
+              <li>Folding Chairs</li>
+              <li>PA System</li>
+              <li>Award Podiums</li>
+            </ul>
+          </div>
+          <div data-role="controlgroup" data-type="horizontal">
+          <a href="#preliminary" class="ui-btn ui-mini ui-btn-b" data-transition="slide" data-direction="reverse">Preliminary Planning</a> 
+          <a href="#oneMonth" class="ui-btn ui-mini ui-btn-b" data-transition="slide">One Month to Go</a></div>
+        </div>
+        <br />
+        <div data-role="footer">
+          <h1>Page footer</h1>
+          <p>copyright, contact information</p>
+        </div>
+      </div>
+    </div>
+    <!--- One Month to go =-->
+    <div id="oneMonth" data-role="page">
+      <div data-role="header">
+        <h1>One Month to Go</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#detail" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <p>With one month to go before the event you should be getting responses and be able to begin preparing the brackets and establishing a final schedule.</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Collect Registration Forms.</h4>
+            <p>Begin collecting registration forms from attendees and populating the athlete tracking process.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Build Competition Brackets</h4>
+            <p>Build divisions based on:</p>
+            <ul data-role="listview" data-inset="true">
+              <li>Age ranges</li>
+              <li>Belt Rank Ranges</li>
+              <li>Gender</li>
+              <li>Height &amp; Weight</li>
+            </ul>
+          </div>
+          <div data-role="collapsible">
+            <h4>Final Tournament Schedule</h4>
+            <p>After completing the brackets, determine the estimated start and end times for each competition heat. this will help to create a final tournament schedule.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Volunteers and Staff</h4>
+            <p>Line up your volunteers and tournament staff: the more the better.</p>
+            <p>With a final schedule you will know how many matches there will be and be able to assign volunteers and staff to support them. Some tasks include:</p>
+            <ul data-role="listview" data-inset="true">
+              <li>Athlete Coordinator</li>
+              <li>Judges
+              <ul data-role="listview" data-inset="true">
+                <li>5 for Poomsae</li>
+                <li>4 for Sparring</li>
+              </ul></li>
+              <li>Score Keepers - 2 per table</li>
+              <li>Referees</li>
+              <li>Awards Distributor</li>
+              <li>Miscellaneous tasks
+              <ul data-role="listview" data-inset="true">
+                <li>Running errands</li>
+                <li>Holding Boards</li>
+                <li>Hospitality Food</li>
+                <li>CleanUp Crew</li>
+              </ul></li>
+            </ul>
+          </div>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+        <a href="#detail" class="ui-btn ui-mini ui-btn-b" data-transition="slide" data-direction="reverse">Detail Planning</a> 
+        <a href="#oneWeek" class="ui-btn ui-mini ui-btn-b" data-transition="slide">One Week to Go</a></div>
+        <br />
+      </div>
+      <div data-role="footer">
+        <h1>Page footer</h1>
+        <p>copyright, contact information</p>
+      </div>
+    </div>
+    <!--- One week to go =-->
+    <div id="oneWeek" data-role="page">
+      <div data-role="header">
+        <h1>One Week to Go</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#oneMonth" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <p>We&#39;re almost there</p>
+        <p>Time to finalize with these tasks</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Obtain Awards</h4>
+            <p>Check that the quantity ordered equals the quantity received.</p>
+            <p>Check that the number on hand matches the number of participants</p>
+            <p>There may be some assembly required, check that all are prepared</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Complete Tournament Program</h4>
+            <p>Now that the brackets have been produced, a program with the approximate times for the age groups can be produced.</p>
+            <p>Print scoring sheets for the judges to have at the tables</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Review Rules</h4>
+            <p>Provide links to documentation on the rules to volunteers to review before the competition. See event day links.</p>
+          </div>
+          <div data-role="controlgroup" data-type="horizontal">
+          <a href="#oneMonth" class="ui-btn ui-mini ui-btn-b" data-transition="slide" data-direction="reverse">One Month to Go</a> 
+          <a href="#eventDay" class="ui-btn ui-mini ui-btn-b" data-transition="slide">Event Day</a></div>
+        </div>
+        <br />
+        <div data-role="footer">
+          <h1>Page footer</h1>
+          <p>copyright, contact information</p>
+        </div>
+      </div>
+    </div>
+    <!--- Event Day =-->
+    <div id="eventDay" data-role="page" data-close-btn="right">
+      <div data-role="header">
+        <h1>Event Day!</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#oneWeek" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <h3>Running the Tournament</h3>
+        <p>Time for the fun to begin.</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Staff Huddle</h4>
+            <p>Conduct your early-morning huddle with officials, referees, staffers and volunteers.</p>
+            <div>
+              <h4>Review Rules and Judging Criteria</h4>
+			  <h6>(press and hold links to open in a new tab)</h6>
+              <p>
+                <a href="WTF_Taekwondo_Sparring_Rules.pdf">Sparring</a>
+              </p>
+              <p>
+                <a href="Poomsae_Judging_WTF.pdf">Forms</a>
+              </p>
+              <p>
+                <a href="Board_Breaking_Competition_Rules.pdf">Breaking</a>
+              </p>
+              <p>
+                <a href="Weapons_Scoring.pdf">Weapons</a>
+              </p>
+            </div>
+          </div>
+          <div data-role="collapsible">
+            <h4>Registration check-in</h4>
+            <p>Have a table set up to check-in athletes and distribute badges</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Athlete Staging area</h4>
+            <p>Place where athletes and gear up and queue up</p>
+            <p>Volunteers needed to help with sparring gear and bringing athletes to the competition area</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Tournament Floor</h4>
+            <p>Two Judges per table to record results.</p>
+            <p>Five Judges per ring for critiqued performances(forms, breaking, weapons)</p>
+            <p>Four Corner Judges per ring for sparring</p>
+            <p>One referee per &quot;ring&quot; to conduct the competition</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Scoring</h4>
+            <p>Provide tables with the brackets, scoring sheets &amp; pencils</p>
+            <p>Five Judges for critiqued performances(forms, breaking, weapons).See 
+            <a href="poomsae_scoring.html" data-ajax="false">Poomsae Scoring</a></p>
+            <p>Four Corner Judges for sparring</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Awards</h4>
+            <p>If you have podiums for awards distribution, have a table stocked with the awards nearby. and allow for sufficient time for picture taking</p>
+            <p>If the awards are distributed at the ring, provide sufficient awards at each table.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Break Time</h4>
+            <p>Tournament day is a long day. Be sure to provide the staff and volunteers with a break</p>
+            <p>Usually there is an honoured guest, either a visiting Master, or the recipients of a fundraiser. This is a good time to introduce the guest and have some lunch.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Clean up</h4>
+            <p>Collect the scoring sheets for publishing the results</p>
+            <p>Breakdown the competition areas</p>
+            <p>Clean up trash left behind.</p>
+            <p>Clean the floor</p>
+          </div>
+          <div data-role="controlgroup" data-type="horizontal">
+          <a href="#oneWeek" class="ui-btn ui-mini ui-btn-b" data-transition="slide" data-direction="reverse">One Week to Go</a> 
+          <a href="#afterEvent" class="ui-btn ui-mini ui-btn-b" data-transition="slide">After the Tournament</a></div>
+        </div>
+        <div data-role="footer">
+          <h1>Page footer</h1>
+          <p>copyright, contact information</p>
+        </div>
+      </div>
+    </div>
+    <!--- Event Day =-->
+    <div id="afterEvent" data-role="page" data-close-btn="right">
+      <div data-role="header">
+        <h1>After the Tournament</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#Home" data-icon="home">Home</a>
+            </li>
+            <li>
+              <a href="#oneWeek" data-icon="back" data-transition="slideup">Return</a>
+            </li>
+            <li>
+              <a href="#anylink" data-icon="search">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <p>Now that the tournament is over, what is left to do?</p>
+        <p>Relecting on how it went and how the next one can be better</p>
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h4>Celebrate the Champions</h4>
+            <p>Publish the results of the competition</p>
+            <p>Post Pictures on Social Media</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Finalize Financials</h4>
+            <p>Finalize all the accounting and financials.</p>
+            <p>Complete all payments of expenses such as referees, awards, and other administrative costs.</p>
+            <p>Calculate proceeds</p>
+            <p>If donating proceeds to an organization, publish the amount donated</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Thank Volunteers and Staff</h4>
+            <p>Send thank-you notes to sponsors, vendors, officials, staffers, volunteers, honored guests, participating schools, etc.</p>
+          </div>
+          <div data-role="collapsible">
+            <h4>Lesson Learned</h4>
+            <p>Document lessons learned.</p>
+			<ul data-role="listview" data-inset="true">
+				<li>What worked well?</li>
+				<li>What needs improvement?</li>
+				<li>What was the quality of the products used?</li>
+				<li>Feedback from participants.</li>
+			</ul>
+          </div>
+          <div data-role="controlgroup" data-type="horizontal">
+            <a href="#eventDay" class="ui-btn ui-mini ui-btn-b" data-transition="slide" data-direction="reverse">Event Day</a>
+          </div>
+        </div>
+        <div data-role="footer">
+          <h1>Page footer</h1>
+          <p>copyright, contact information</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
