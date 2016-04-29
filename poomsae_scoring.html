@@ -44,8 +44,8 @@
         
 </style>
   </head>
-  <body>
-    <div data-role="page" id="PoomsaeScoring">
+  <body data-ajax="false">
+    <div data-role="page" id="PoomsaeScoring" >
       <div data-role="header">
       <img src="images/poomsae-sidekick_50x40.png" alt="poomsae_sidekick" /> 
       <span id="inlineHdr">Poomsae Scoring</span>
@@ -74,10 +74,10 @@
       <div data-role="main" class="ui-content" data-theme="a">
         <h5>POOMSAE MASTERY</h5>
 		<div id="masterySubmit" data-mini="true">
-		  <input type="submit" value="Final Score" id="masteryScore" form="formMastery" />
+		  <input type="submit" value="Final Score" id="masteryScore" form="formMastery" data-ajax="false" />
 		</div>
         <div class="ui-field-contain">
-          <form  id="formMastery">
+          <form  id="formMastery" data-ajax="false">
             
 			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="movement" data-theme="b">
             <legend>Extent of Movement:</legend> 
@@ -164,7 +164,7 @@
         <hr />
         <div class="ui-field-contain ui-btn-inline" data-mini="true" >
 		
-		<form  name="deductions">
+		<form  name="deductions" data-ajax="false">
 		<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="deduct" data-theme="a" class="ui-btn-inline">
              <legend>POOMSAE Accuracy of Movement:</legend>
 			<label for="rbPtThree">0.3 Deduction</label> 

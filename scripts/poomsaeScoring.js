@@ -1,4 +1,4 @@
- //general housekeeping
+  //general housekeeping
 	          var _$ = function (id) {
 
 	              return document.getElementById(id);
@@ -60,11 +60,11 @@
 	              scoreResult -= deductAmount;
 	              accuracyDeduct += deductAmount;
 	              
-	              WriteScore(scoreResult);
+	              WriteScore();
 
 	          }
 
-	          function WriteScore(scoreResult) {
+	          function WriteScore() {
 	              _$('score').innerHTML = scoreResult.toFixed(1);
 	          }
 
@@ -80,7 +80,7 @@
 	              
 	              scoreResult = (5 - accuracyDeduct) + masteryScores;
 
-	              WriteScore(scoreResult);
+	              WriteScore();
 
 	              
 	          }
@@ -91,26 +91,23 @@
 	              
 
 	              if (_$("rb" + radioGroup + "One").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "One").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "One").value);
 	              }
 	              if (_$("rb" + radioGroup + "PtNine").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "PtNine").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "PtNine").value);
 	              }
 	              if (_$("rb" + radioGroup + "PtEight").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "PtEight").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "PtEight").value);
 	              }
 	              if (_$("rb" + radioGroup + "PtSeven").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "PtSeven").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "PtSeven").value);
 	              }
 	              if (_$("rb" + radioGroup + "PtSix").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "PtSix").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "PtSix").value);
 	              }
 	              if (_$("rb" + radioGroup + "PtFive").checked) {
-	                  categoryRate = parseFloat(_$("rb" + radioGroup + "PtFive").value);
+	                  categoryRate = parseFloat( _$("rb" + radioGroup + "PtFive").value);
 	              }
 
 	              masteryScores += categoryRate;
 	          }
-
-                
-
