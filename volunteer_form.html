@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>Tournament Planning Mobile App</title>
+    <!---  jquery mobile =-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+    <link rel="stylesheet" href="themes/ScoreCard.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-myStyles.css" />
+    <script src="scripts/jquery-1.12.2.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.js"></script>
+    <meta name="viewport" content="width=device-width" />
+	
+  </head>
+  <body>
+    <!--- Welcome Page =-->
+    <section id="Home" data-role="page">
+      <div data-role="header">
+	  
+        <h1>Tournament Planning App</h1>
+		 </div>   <!-- end of header -->
+      <div class="ui-content" role="main">
+        <h3>Volunteer Signup <br> --- Thank you for volunteering.</h3>
+         <form  id="formVolunteer" >
+            <div class="ui-field-contain myForm" >
+			 <fieldset class="ui-grid-a">
+			<div  class="ui-block-a">
+            <label for="txtVName">Volunteer Name</label> 
+            <input type="text" name="txtVName" id="txtVName" value="" data-role="none" />
+			</div>    <!-- end of block a -->
+			<div  class="ui-block-b">
+            <label for="txtVPhone">Cell Phone #</label> 
+            <input type="text" name="txtVPhone" id="txtVPhone" value="" data-role="none" />
+			</div>    <!-- end of block b -->
+			<div  class="ui-block-a">
+            <label for="txtVEmail">Email</label> 
+            <input type="email" name="txtVEmail" id="txtVEmail" value="" data-role="none" />
+			</div>    <!-- end of block a -->
+			<div  class="ui-block-b">
+            <label for="txtVAvail">Availability</label> 
+            <input type="text" name="txtVAvail" id="txtVAvail" value="" placeholder="Enter time range or all day" data-role="none" />
+			</div>    <!-- end of block b -->
+			<div  class="ui-block-a">
+            <label for="txtVRank">Belt Rank (if Judge or Referee)</label> 
+            <input type="text" name="txtVRank" id="txtVRank" value="" data-role="none" />
+			</div>    <!-- end of block a -->
+			<div  class="ui-block-b">
+            <label for="ddlRole" >Preferred Position</label>
+				<select name="ddlRole" id="ddlRole" data-mini="true">
+					<option value="any" selected>No Preference</option>
+					<option value="judge" >Judge</option>
+					<option value="referee">Referee</option>
+					<option value="assist">Competitor Assistant</option>
+					<option value="scorer">Score Keeper</option>
+					<option value="other">Other</option>
+				</select>
+			</div>    <!-- end of block b -->
+			</fieldset>  <!-- end of fieldset -->
+			</div>   <!-- end of form container -->
+			</form>  <!-- end of volunteer form -->
+			<div id="submitButton" data-mini="true">
+		  <input type="submit" value="Submit" id="btnSubmit" form="formVolunteer" />
+		</div>  <!-- end of submit button -->
+		</div>  <!-- end of main content -->
+      <div data-role="footer" data-position="fixed" data-fullscreen="true" >
+        <h1>Tournament Planner</h1>
+		<div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div>  <!-- end of footer -->
+    </section>   <!-- end of home page -->

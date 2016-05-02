@@ -1,0 +1,34 @@
+/* alter the positioning of the header */
+#inlineHdr {font-weight: bold;
+				
+}
+/* Place the csore in the upper right corner */
+#totalScore {position: absolute;
+						font-size: 60%;
+						top: 0%;
+						right: 0%;
+						background-color: #2e3192;
+}
+/* Place the reset button in the header to the left of the score */
+#resetScore {position: absolute;
+						font-size: 100%;
+						top: 0%;
+						right: 30%;
+						background-color: #005e32;
+}
+/* Increase font for the current score */
+#score {font-size: 300%;}
+/* reduce the font of the reset and deduction buttons */
+.sm-btn-font {font-size: 100%;}
+/* Reduce the form of the labels */
+legend,
+.ui-mobile label,
+div.ui-controlgroup-label {
+font-weight: normal;
+font-size: 80%;
+}
+/* position the mastery submit button to the right upper corner of the container */
+#masterySubmit {position: absolute;
+		top: 10%;
+		right:0%;}
+        

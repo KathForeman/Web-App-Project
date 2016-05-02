@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tournament Planning Mobile App</title>
+    <!---  jquery mobile =-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.external-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+    <link rel="stylesheet" href="themes/ScoreCard.min.css" />
+    <script src="scripts/jquery-1.12.2.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.js"></script>
+    <meta name="viewport" content="width=device-width" />
+	<style>
+	#submitButton {position: absolute;
+			botom: 10%;
+			right: 5%;}
+	</style>
+  </head>
+  <body>
+    <!--- Welcome Page =-->
+    <section id="Home" data-role="page">
+      <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
+        <h1>Competitor Registration</h1>
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#signup" Account <br> Signup</a>
+            </li>
+			<li>
+              <a href="#registration" >Registration</a>
+            </li>
+			
+            <li>
+              <a href="#School" >Insurance</a>
+            </li>
+			<li>
+              <a href="#School" >School Information</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <h3>Welcome to Tournament Registration</h3>
+        <p>Let&#39;s get you signed up!</p>
+		
+        
+        <a href="#signup" class="ui-btn ui-shadow" data-transition="pop">Account Signup</a> 
+       
+        <br />
+      </div>
+      <div data-role="footer" data-position="fixed" data-fullscreen="true" style="font-size: 50%;">
+        <h1>Tournament Planner</h1>
+        <p>copyright Kathleen Foreman 2016, kfor2662@stu.raritanval.edu</p>
+      </div>
+    </section>
+	
+	 <!--- Account Signup =-->
+    <div id="signup" data-role="page" data-theme="g">
+      <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
+        <h1>Competitor Registration</h1>
+        <div data-role="navbar" data-mini="true">
+		<ul>
+            <li>
+              <a href="#signup" Account <br> Signup</a>
+            </li>
+			<li>
+              <a href="#registration" >Registration</a>
+            </li>
+			
+            <li>
+              <a href="#School" >Insurance</a>
+            </li>
+			<li>
+              <a href="#School" >School Information</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-content" role="main">
+        <h3>Account Signup </h3>
+		<p data-mini="true"> Already have an account? <a href="">Signin</a></p>
+		<!-- <div class="ui-field-contain"> -->
+		<div data-role="form" data-theme="g">
+			<table data-role="table"  data-mode="columntoggle"  class="ui-responsive">
+			<tr>
+				<td>UserName<td>
+				<td><input type="text" name="txtUName" id="txtUName" value="" /> </td>
+				<td><td>
+			</tr>
+		    <tr>        
+				<td>First Name</td> 
+				
+            <td><input type="text" name="txtFName" id="txtFName" value="" /> </td>
+			<td>Last Name</td> 
+			<td><input type="text" name="txtlName" id="txtlName" value="" /> </td>
+			</tr>
+			<!-- <label for="txtLName">Last Name</label> 
+			<input type="text" name="txtLName" id="txtLName" value="" /> 
+			<label for="txtEMail">Email Address</label> 
+			<input type="email" name="txtEMail" id="txtEMail" value="" /> 
+			<label for="txtConfEmail">Confirm Email</label> 
+			<input type="email" name="txtConfEmail" id="txtConfEmail" value="" /> 
+			<label for="txtPswd">Password</label> 
+			<input type="password" name="txtPswd" id="txtPswd" value="" /> 
+			<label for="txtConfPswd">Confirm Password</label> 
+			<input type="password" name="txtConfPswd" id="txtConfPswd" value="" />  -->
+			
+			
+			</table>
+			<div id="submitButton" data-mini="true">
+		  <input type="submit" value="SignUp" id="btnSignup"  />
+		</div>
+		</div>
+		</div>  <!-- end fieldcontain -->
+		  <div data-role="footer" data-position="fixed" data-fullscreen="true" style="font-size: 50%;">
+        <h1>Tournament Planner</h1>
+        <p>copyright Kathleen Foreman 2016, kfor2662@stu.raritanval.edu</p>
+      </div> <!-- end footer -->
+		</div> <!-- end main -->
+		</div> <!-- end signup page -->
+</body>
+</html>

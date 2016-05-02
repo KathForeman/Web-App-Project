@@ -1,0 +1,19 @@
+#submitButton {position: absolute;
+			bottom: 5%;
+			right: 5%;}
+#userNameBox { float:right; }
+	.myForm label.ui-input-text  { vertical-align: top;   }
+	.myForm label.ui-input-text { display: inline-block;  width: 35%;  margin: 0 10% 0 10%; }
+	.myForm input.ui-input-text, 
+	.myform textarea.ui-input-text, 
+	.myForm .ui-input-search { width: 35%; display: inline-block; margin-left: 10%;}
+	.ui-field-contain {margin-left: 5%;}
+	@media screen and (min-width: 800px) {
+	.myForm label.ui-input-text  { vertical-align: top;   }
+	.myForm label.ui-input-text, input { display: inline-block;  width: 45%;  margin: 0 5% 0 5%; }
+	.myForm input.ui-input-text, 
+	.myform textarea.ui-input-text, 
+	.myForm .ui-input-search { width: 45%; display: inline-block; margin-left: 10%;}
+	.ui-field-contain {margin-left: 5%;}
+	}
+	.ui-footer  {font-size: 50%;}

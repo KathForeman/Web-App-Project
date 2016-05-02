@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>Tournament Planning Mobile App</title>
     <!---  jquery mobile =-->
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
@@ -10,26 +11,21 @@
     <link rel="stylesheet" href="css/jquery.mobile.inline-svg-1.4.5.css" />
     <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
     <link rel="stylesheet" href="themes/ScoreCard.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-myStyles.css" />
     <script src="scripts/jquery-1.12.2.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.js"></script>
     <meta name="viewport" content="width=device-width" />
-	<style>
-	#submitButton {position: absolute;
-			botom: 10%;
-			right: 5%;}
-	</style>
+	
   </head>
   <body>
     <!--- Welcome Page =-->
     <section id="Home" data-role="page">
       <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
         <h1>Competitor Registration</h1>
         <div data-role="navbar">
           <ul>
             <li>
-              <a href="#Home" data-icon="home">Home</a>
-            </li>
-			<li>
               <a href="#signup" Account <br> Signup</a>
             </li>
 			<li>
@@ -37,10 +33,10 @@
             </li>
 			
             <li>
-              <a href="#School" >Insurance</a>
+              <a href="#insurance" >Insurance</a>
             </li>
 			<li>
-              <a href="#School" >School Information</a>
+              <a href="#school" >School Information</a>
             </li>
           </ul>
         </div>
@@ -56,20 +52,30 @@
       </div>
       <div data-role="footer">
         <h1>Tournament Planner</h1>
-        <p>copyright Kathleen Foreman 2016, kfor2662@stu.raritanval.edu</p>
-      </div>
-    </section>
+		<div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div>  <!-- end of footer -->
+    </section>   <!-- end of home page -->
 	
 	 <!--- Account Signup =-->
-    <div id="signup" data-role="page" data-theme="g">
+<section id="signup" data-role="page" data-theme="g">
       <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
         <h1>Competitor Registration</h1>
         <div data-role="navbar" data-mini="true">
 		<ul>
             <li>
-              <a href="#Home" data-icon="home">Home</a>
-            </li>
-			<li>
               <a href="#signup" Account <br> Signup</a>
             </li>
 			<li>
@@ -77,45 +83,446 @@
             </li>
 			
             <li>
-              <a href="#School" >Insurance</a>
+              <a href="#insurance" >Insurance</a>
             </li>
 			<li>
-              <a href="#School" >School Information</a>
+              <a href="#school" >School Information</a>
             </li>
           </ul>
-        </div>
-      </div>
+        </div>    <!-- end of navbar -->
+      </div>    <!-- end of header -->
       <div class="ui-content" role="main">
         <h3>Account Signup </h3>
 		<p data-mini="true"> Already have an account? <a href="">Signin</a></p>
-		 <div class="ui-field-contain">
-          <form  id="formSignup">
-            
+		 
+          <form  id="formSignup" >
+            <div class="ui-field-contain myForm" >
+			 <fieldset class="ui-grid-a">
+			<div  class="ui-block-a">
+            <label for="txtUName">UserName</label> 
+            <input type="text" name="txtUName" id="txtUName" value="" data-role="none" />
+			</div>    <!-- end of block a -->
 			
-            <label for="txtFName">First Name</label> 
-            <input type="text" name="txtFName" id="txtFName" value="" /> 
+			<div  class="ui-block-a">
+			<label for="txtFName">First Name</label> 
+            <input type="text" name="txtFName" id="txtFName" value="" data-role="none" /> 
+			</div>     <!-- end of block a -->
+			<div  class="ui-block-b">
 			<label for="txtLName">Last Name</label> 
-			<input type="text" name="txtLName" id="txtLName" value="" /> 
+			<input type="text" name="txtLName" id="txtLName" value="" data-role="none" /> 
+			</div>   <!-- end of block b -->
+			<div  class="ui-block-a">
 			<label for="txtEMail">Email Address</label> 
-			<input type="email" name="txtEMail" id="txtEMail" value="" /> 
+			<input type="email" name="txtEMail" id="txtEMail" value="" data-role="none" /> 
+			</div>     <!-- end of block a -->
+			<div class="ui-block-b">
 			<label for="txtConfEmail">Confirm Email</label> 
-			<input type="email" name="txtConfEmail" id="txtConfEmail" value="" /> 
+			<input type="email" name="txtConfEmail" id="txtConfEmail" value="" data-role="none" /> 
+			</div>   <!-- end of block b -->
+			<div class="ui-block-a">
 			<label for="txtPswd">Password</label> 
-			<input type="password" name="txtPswd" id="txtPswd" value="" /> 
+			<input type="password" name="txtPswd" id="txtPswd" value="" data-role="none" /> 
+			</div>     <!-- end of block a -->
+			<div class="ui-block-b">
 			<label for="txtConfPswd">Confirm Password</label> 
-			<input type="password" name="txtConfPswd" id="txtConfPswd" value="" /> 
+			<input type="password" name="txtConfPswd" id="txtConfPswd" value="" data-role="none" /> 
+			</div>   <!-- end of block b -->
+			</form>  <!-- end of signup form -->
+				
+		</div>  <!-- end of form container -->
+		
+		<div id="submitButton" data-mini="true">
+		  <input type="submit" value="SignUp" id="btnSignup" form="formSignup" />
+		</div>  <!-- end of  signup submit -->
+		  <div data-role="footer" data-position="fixed" data-fullscreen="true" >
+        <h1>Tournament Planner</h1>
+        <div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div> <!-- end of footer -->
+		</div>  <!-- end of main content -->
+</section>  <!-- end of signup page -->
+		
+		 <!--- registration =-->
+<section id="registration" data-role="page" data-theme="g">
+      <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
+        <h1>Competitor Registration</h1>
+        <div data-role="navbar" data-mini="true">
+		<ul>
+            <li>
+              <a href="#signup" Account <br> Signup</a>
+            </li>
+			<li>
+              <a href="#registration" >Registration</a>
+            </li>
 			
+            <li>
+              <a href="#insurance" >Insurance</a>
+            </li>
+			<li>
+              <a href="#school" >School Information</a>
+            </li>
+          </ul>
+        </div>  <!-- end ov navbar -->
+      </div> <!-- end of header -->
+      <div class="ui-content" role="main">
+        <h3>Participant Registration </h3>
+		<div id="userNameBox" data-mini="true"> <textarea name="userName"  disabled data-role="none" rows="1" cols="20">UserName</textarea> </div>
+		 
+          <form  id="formReg" >
+            <div class="ui-field-contain myForm" >
+			 <fieldset class="ui-grid-a">
+	
+	<!-- First name Last name -->
+			<div  class="ui-block-a">
+			<label for="txtFName" >First Name</label> 
+            <input type="text" name="txtFName" id="txtFName" value="" placeholder="First name" data-role="none"  /> 
+			</div>  <!-- end of block a -->
+			<div  class="ui-block-b">
+			<label for="txtLName" >Last Name</label> 
+			<input type="text" name="txtLName" id="txtLName" value="" placeholder="Last name"  data-role="none"  /> 
+			</div>  <!-- end of block b -->
 			
+	<!-- Address 1 -- gender -- date of birth -->		
+			<div  class="ui-block-a">
+			<label for="txtAddr1" >Address 1</label> 
+			<input type="email" name="txtAddr1" id="txtAddr1" value="" placeholder="Address 1" data-role="none"   /> 
+			</div>  <!-- end of block a -->
+			<div class="ui-block-b">     
+				<div class="myForm" >
+			 <fieldset class="ui-grid-a"> 	<!-- gender and date of birth -->
+			 
+			 <div  class="ui-block-a">
+				<label for="ddlGender" >Gender</label>
+				<select name="ddlGender" id="ddlGender" data-mini="true">
+					<option value="male" selected>Male</option>
+					<option value="female">Female</option>
+				</select>
+				</div>  <!-- end block-a -->
+			<div  class="ui-block-b">
+				<label for="bday">Date of Birth:</label>
+					<input type="date" name="bday" id="bday"  data-role="none" >
+				</div>  <!-- end block-b -->
+			</fieldset>
+				</div>  <!-- end of inner grid -->
+			</div>  <!-- end of block b outer -->
+			
+	<!-- address 2 and age -->		
+			<div class="ui-block-a">
+			<label for="txtRegAddr2" >Address 2</label> 
+			<input type="text" name="txtRegAddr2" id="txtRegAddr2" value="" placeholder="Address 2"  data-role="none" /> 
+			</div>  <!-- end of block a -->
+			<div class="ui-block-b">
+				<fieldset class="ui-grid-b">
+				<div  class="ui-block-a">
+					<label for="txtRegAge">Age</label> 
+					<input type="text" name="txtRegAge" id="txtRegAge" value=""  data-role="none"  />
+				</div>  <!-- end block-a -->			
+				</fieldset>
+			</div>  <!-- end of block b -->
+			
+	<!-- city state zip   height and weight -->		
+			<div class="ui-block-a">
+			<fieldset class="ui-grid-b">
+			<div  class="ui-block-a">
+			<label for="txtRegCity" >City</label> 
+			<input type="text" name="txtRegCity" id="txtRegCity" value="" placeholder="City"  data-role="none" /> 
+			</div>  <!-- end of block a -->
+			<div  class="ui-block-b">
+			<label for="txtRegState" >State</label> 
+			<input type="text" name="txtRegState" id="txtRegState" value="" placeholder="ST"  data-role="none" /> 
+			</div>  <!-- end of block b -->
+			<div  class="ui-block-c">
+			<label for="txtRegZip" >Zipcode</label> 
+			<input type="text" name="txtRegZip" id="txtRegZip" value="" placeholder="Zipcode"  data-role="none" /> 
+			</div>  <!-- end of block c -->
+			</fieldset> <!-- end of inner grid -->
+			</div>  <!-- end of block a -->
+			<div class="ui-block-b">
+				<fieldset class="ui-grid-a">
+				<div  class="ui-block-a">
+					<label for="txtRegHt">Height</label> 
+					<input type="text" name="txtRegHt" id="txtRegHt" value=""  data-role="none"  />
+				</div>  <!-- end block-a -->
+				<div  class="ui-block-b">
+					<label for="txtRegWt">Weight</label> 
+					<input type="text" name="txtRegWt" id="txtRegWt" value=""  data-role="none"  />
+				</div>  <!-- end block-b -->				
+				</fieldset>
+			</div>  <!-- end of block b -->
+			
+	<!-- Event Selection and Rank -->		
+		<div class="ui-block-a">     <!-- event Selection -->
+			<fieldset data-role="control-group" class="ui-grid-a">
+			<legend>Select Events</legend>
+			<div  class="ui-block-a">
+			<label for="rbEventSpar" >Sparring</label> 
+			<input type="checkbox" name="event" id="rbEventSpar" value="Sparring"  data-role="none" />
+			</div>  <!-- end of inner block a -->
+			<div   class="ui-block-b">
+			<label for="rbEventForm" >Forms</label> 
+			<input type="checkbox" name="event" id="rbEventForm" value="Forms" data-role="none"  /> 
+			</div>  <!-- end of inner block b -->
+			<div  class="ui-block-a">
+			<label for="rbEventBreak" >Breaking</label> 
+			<input type="checkbox" name="event" id="rbEventBreak" value="Breaking" data-role="none"  />
+			</div>  <!-- end of inner block a -->
+			<div   class="ui-block-b">
+			<label for="rbEventWeapon" >Weapons</label> 
+			<input type="checkbox" name="event" id="rbEventWeapon" value="Weapons" data-role="none"  /> 
+			</div>  <!-- end of inner block b -->
+			</fieldset>  <!-- end of block a fieldset -->
+		</div> <!-- end of block a -->
+			
+			<div class="ui-block-b">   <!-- ranking -->
+				<div class="myForm" >
+			 <fieldset class="ui-grid-a"> 	<!-- gender and date of birth -->
+			 <legend>Rank</legend>
+			 <div  class="ui-block-a">
+				<label for="ddlColorBelt" >Color Belts</label>
+				<select name="ddlColorBelt" id="ddlColorBelt" data-mini="true">
+					<option value="White" selected>White</option>
+					<option value="Yellow" >Yellow</option>
+					<option value="Orange" >Orange</option>
+					<option value="Green" >Green</option>
+					<option value="Blue" >Blue</option>
+					<option value="Purple" >Purple</option>
+					<option value="Red" >Red</option>
+					<option value="Brown" >Brown</option>
+					<option value="Jr.Black" >Jr.Black</option>
+				</select>
+				</div>  <!-- end block-a -->
+				 
+				<div  class="ui-block-b">
+					<label for="txtRegBB">Black Belts</label> 
+				<select name="txtRegBB" id="txtRegBB" data-mini="true">
+					<option value="1stDan" selected>1st Dan</option>
+					<option value="2ndDan" >2nd Dan</option>
+					<option value="3rdDan" >3rd Dan</option>
+					<option value="4thDan" >4th Dan</option>
+					<option value="5thDan" >5th Dan</option>
+				</select>
+				</div>  <!-- end block-b -->				
+				</fieldset>
+				</div> <!--  end of drop downs -->
+			</div>  <!-- end of block b -->	
+	</div>  <!-- end form container -->
+			</fieldset> <!-- end outer fieldset -->
+			</form>
+			
+		<div id="submitButton" data-mini="true">
+		  <button type="button" ><a href="#insurance" >Continue</a></button>
+		</div>
+		
+		</div> <!-- end main content -->
+		
+		  <div data-role="footer" data-position="fixed" data-fullscreen="true" >
+        <h1>Tournament Planner</h1>
+        <div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div>    <!-- end of footer -->
+</section> <!-- end  registration page -->
+
+ <!--- Insurance =-->
+<section id="insurance" data-role="page" data-theme="g">
+      <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
+        <h1>Competitor Registration</h1>
+        <div data-role="navbar" data-mini="true">
+		<ul>
+            <li>
+              <a href="#signup" Account <br> Signup</a>
+            </li>
+			<li>
+              <a href="#registration" >Registration</a>
+            </li>
+			
+            <li>
+              <a href="#insurance" >Insurance</a>
+            </li>
+			<li>
+              <a href="#school" >School Information</a>
+            </li>
+          </ul>
+        </div>  <!-- end of nav bar -->
+      </div>  <!-- end of header -->
+      <div class="ui-content" role="main">
+        <h3>Participant Insurance </h3>
+		<div id="userNameBox" data-mini="true"> <textarea name="userName"  disabled data-role="none" rows="1" cols="20">UserName</textarea> </div>
+		 
+          <form  id="formInsurance" >
+            <div class="ui-field-contain myForm" >
+			 <fieldset class="ui-grid-a">
+			<div  class="ui-block-a">
+            <label for="txtInsName">Insurance Company</label> 
+            <input type="text" name="txtInsName" id="txtInsName" value=""  data-role="none"  />
+			</div>  <!-- end block a -->
+			
+			<div  class="ui-block-b">
+			<label for="txtInsID">ID #</label> 
+            <input type="text" name="txtInsID" id="txtInsID" value=""  data-role="none"  /> 
+			</div> <!-- end of block b -->
+			
+			<div  class="ui-block-a">
+			<label for="txtInsEmerContact">Emergency Contact</label> 
+			<input type="text" name="txtInsEmerContact" id="txtInsEmerContact" value="" data-role="none"  /> 
+			</div>
+			<div class="ui-block-b">
+			<label for="txtInsEmerNumber">Confirm Email</label> 
+			<input type="email" name="txtInsEmerNumber" id="txtInsEmerNumber" value=""  data-role="none"  /> 
+			</div>
+			<div class="ui-block-a">
+			<label for="txtInsWaiver">Waiver</label> 
+			<textarea name="Waiver"  disabled>Liability Waiver</textarea>  
+			</div>
+			<div class="ui-block-b"  data-mini="true">
+			<input type="submit" name="btnAccept" id="btnAccept" value="Accept" data-role="none"  /> 
+			</div>  <!-- end block b -->
+			</div>  <!-- end form container -->
 			</form>
 			<div id="submitButton" data-mini="true">
-		  <input type="submit" value="SignUp" id="btnSignup" form="formSignup" />
-		</div>
-		</div>
-		</div>
-		  <div data-role="footer">
+		  <button type="button" ><a href="#school" >Continue</a></button>
+		</div>  <!-- end of continue button -->
+		
+		</div> <!-- end of main content -->
+		
+		  <div data-role="footer" data-position="fixed" data-fullscreen="true" >
         <h1>Tournament Planner</h1>
-        <p>copyright Kathleen Foreman 2016, kfor2662@stu.raritanval.edu</p>
-      </div>
-		</div>
+        <div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div>  <!-- end of footer -->
+		
+</section>	<!-- end of insurance page -->
+
+ <!--- School Affiliation =-->
+<section id="school" data-role="page" data-theme="g">
+      <div data-role="header">
+	  <a href="#Home" class="ui-btn ui-icon-home ui-corner-all ui-btn-icon-left">Home</a>
+        <h1>Competitor Registration</h1>
+        <div data-role="navbar" data-mini="true">
+		<ul>
+            <li>
+              <a href="#signup" Account <br> Signup</a>
+            </li>
+			<li>
+              <a href="#registration" >Registration</a>
+            </li>
+			
+            <li>
+              <a href="#insurance" >Insurance</a>
+            </li>
+			<li>
+              <a href="#school" >School Information</a>
+            </li>
+          </ul>
+        </div>  <!-- end of nav bar -->
+      </div>  <!-- end of header -->
+      <div class="ui-content" role="main">
+        <h3>School Information </h3>
+		<div id="userNameBox" data-mini="true"> <textarea name="userName"  disabled data-role="none" rows="1" cols="20">UserName</textarea> </div>
+		 
+        <form  id="formSchool" >
+            <div class="ui-field-contain myForm" >
+			 <fieldset class="ui-grid-a">
+			<div  class="ui-block-a">
+            <label for="txtSchoolName">School Name</label> 
+            <input type="text" name="txtSchoolName" id="txtSchoolName" value=""  data-role="none"  />
+			</div>  <!-- end block a -->
+			
+			<div  class="ui-block-b">
+			<label for="txtSchoolPhone">Phone #</label> 
+            <input type="text" name="txtSchoolPhone" id="txtSchoolPhone" value=""  data-role="none"  /> 
+			</div> <!-- end of block b -->
+			
+			<div  class="ui-block-a">
+			<label for="txtSchoolInstr">Instructor Name</label> 
+			<input type="text" name="txtSchoolInstr" id="txtSchoolInstr" value=""  data-role="none" /> 
+			</div>  <!-- end of block a -->
+			<div class="ui-block-b">
+			<label for="txtSchoolInstrRank">Instructor Rank</label> 
+			<input type="text" name="txtSchoolInstrRank" id="txtSchoolInstrRank" value=""  data-role="none"  /> 
+			</div>   <!-- end of block b -->
+			<div class="ui-block-a">
+			<label for="txtSchoolAddress">School Address</label> 
+			<input type="text" name="txtSchoolAddress" id="txtSchoolAddress" value="" data-role="none"  />  
+			</div>  <!-- end of block a -->
+			<div class="ui-block-b"  >
+			</div>  <!-- end of block b - empty block -->
+			<div class="ui-block-a"  >
+			<label for="txtSchoolCity">School City</label> 
+			<input type="text" name="txtSchoolCity" id="txtSchoolCity" value=""  data-role="none"  /> 
+			</div>  <!-- end block a -->
+			<div class="ui-block-b"  data-mini="true">
+				<fieldset class="ui-grid-a">
+				<div  class="ui-block-a">
+				<label for="txtSchoolST" >State</label> 
+				<input type="text" name="txtSchoolST" id="txtSchoolST" value=""  data-role="none"  /> 
+				</div>  <!-- end of inner block a -->
+				<div  class="ui-block-b">
+				<label for="txtSchoolZip" >Zipcode</label> 
+				<input type="text" name="txtSchoolZip" id="txtSchoolZip" value=""  data-role="none"  /> 
+				</div>  <!-- end of inner block b -->
+				</fieldset>  <!-- end of inner grid -->
+			</div>  <!-- end outer block b -->
+			</fieldset>  <!-- end of form fieldset -->
+			</div>  <!-- end form container -->
+		</form>  <!-- end of school form -->
+		<div id="submitButton" data-mini="true">
+		  <input type="submit" value="Submit" id="btnSubmit" form="formSchool" />
+		</div>  <!-- end of submit button -->
+		
+		</div> <!-- end of main content -->
+		
+	 <div data-role="footer" data-position="fixed" data-fullscreen="true" >
+        <h1>Tournament Planner</h1>
+        <div data-role="navbar">
+		<ul>
+            <li>
+			Copyright Kathleen Foreman 2016
+			</li>
+			<li>		
+			kfor2662@stu.raritanval.edu
+			</li>    
+			<li>
+			About Me
+			</li>    
+		</ul>
+		</div> <!-- end of footer navbar -->
+      </div>  <!-- end of footer -->
+		
+</section>	<!-- end of insurance page -->
 </body>
 </html>
